@@ -45,11 +45,3 @@ Windows向けの軽量・シンプルなショートカットキー（マクロ�
 | **[×] ボタン** | ウィンドウを隠して **タスクトレイへ格納** |
 
 > ※タスクトレイのアイコンをダブルクリックすると、設定画面が再表示されます。
-
----
-
-## 🏗 ビルド方法（開発者向け）
-Visual Studio の開発者コマンドプロンプト等で、以下のコマンドを使用してビルド可能です。
-
-```cmd
-cl.exe /nologo /O2 /MT /W3 /utf-8 /DUNICODE /D_UNICODE main.cpp imgui*.cpp backends\imgui_impl_win32.cpp backends\imgui_impl_dx11.cpp /I. /I.\backends /link /SUBSYSTEM:WINDOWS /OUT:WinHot-Plus.exe d3d11.lib d3dcompiler.lib shell32.lib user32.lib gdi32.lib
