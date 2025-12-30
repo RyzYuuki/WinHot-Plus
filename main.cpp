@@ -652,7 +652,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     // B. ウィンドウクラスの登録
 
     std::wstring class_name_w = utf8_to_wstring(u8"MacroTool クラス");
-    std::wstring window_title_w = utf8_to_wstring(u8"WinHot Plus");
+    std::wstring window_title_w = utf8_to_wstring(u8"WinHot-Plus");
 
     WNDCLASSEXW wc = { 0 }; // 一旦すべて0で初期化
     wc.cbSize = sizeof(WNDCLASSEXW);
@@ -698,7 +698,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     // アイコンは標準のアプリケーションアイコンを使用
     g_nid.hIcon = LoadIcon(NULL, IDI_APPLICATION);
     // マウスを乗せたときに出る説明（日本語）
-    wcscpy_s(g_nid.szTip, L"WinHot Plus (Ctrl+F12 to Pause)");
+    wcscpy_s(g_nid.szTip, L"WinHot-Plus (Ctrl+F12 to Pause)");
     
     // トレイに登録
     Shell_NotifyIconW(NIM_ADD, &g_nid);
